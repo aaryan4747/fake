@@ -1,0 +1,29 @@
+import pandas as pd
+import random
+
+# Configuration
+num_samples = 100
+filename = "synthetic_fake_news.csv"
+
+# Sample Data Pools
+real_headlines = ["Economy shows signs of recovery", "New healthcare bill passed", "Tech giant announces layoff"]
+fake_headlines = ["Miracle cure for everything found", "Secret moon base discovered", "Celebrity found alive on desert island"]
+sources = ["Associated Press", "The New York Times", "GlobalTruthNet", "SatireWire"]
+
+data = []
+
+for i in range(num_samples):
+    label = random.choice(["Real", "Fake"])
+    headline = random.choice(real_headlines if label == "Real" else fake_headlines)
+    
+    data.append({
+        "id": i + 1,
+        "headline": headline,
+        "body_text": f"This is a sample body text for a {label} news article regarding {headline.lower()}.",
+        "source": random.choice(sources),
+        "label": label
+    })
+
+df = pd.DataFrame(data)
+df.to_csv(filename, index=False)
+print(f"Successfully generated {num_samples} rows in {filename}")
