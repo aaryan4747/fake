@@ -1,0 +1,10 @@
+import yaml
+
+def load_config(config_file="config.yml"):
+    with open(config_file, "r") as f:
+        config = yaml.safe_load(f)
+    return config
+
+# Usage
+cfg = load_config()
+print(f"Training model with test size: {cfg['data']['test_size']}")
