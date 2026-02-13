@@ -5,4 +5,5 @@ The advent of the World Wide Web and the rapid adoption of social media platform
 
 Project is in Python Programming.
 
+The Fake News Detection System is a machine learning-based project developed to identify whether a news article is real or fake by analyzing its textual content. The system uses Natural Language Processing (NLP) techniques to preprocess and clean the data, followed by feature extraction using methods such as TF-IDF vectorization. A supervised learning algorithm like Logistic Regression or Naive Bayes is then trained on the processed dataset to classify news articles accurately. The model evaluates patterns in the text and predicts authenticity with high accuracy. This project demonstrates practical implementation of text mining, data preprocessing, model training, and performance evaluation. It can be further enhanced with deep learning models, web integration, or cloud deployment, making it a strong real-world application of AI and machine learning in combating misinformation.
 
