@@ -1,0 +1,48 @@
+# Fake News Detection System Configuration
+
+project_name: "FakeNewsGuard_v1"
+version: "1.0.0"
+
+# --- Data Paths ---
+data:
+  raw_path: "data/raw/fake_news_dataset.csv"
+  processed_path: "data/processed/cleaned_data.pkl"
+  test_size: 0.2
+  random_state: 42
+
+# --- Preprocessing Settings ---
+preprocessing:
+  remove_stopwords: true
+  use_lemmatization: true
+  max_features: 5000  # For TF-IDF or Word Embeddings
+  text_columns: ["headline", "body_text"]
+
+# --- Model Hyperparameters ---
+models:
+  naive_bayes:
+    alpha: 1.0
+    fit_prior: true
+    
+  svm:
+    kernel: "linear"
+    C: 1.0
+    probability: true
+
+  rnn:
+    embedding_dim: 128
+    lstm_units: 64
+    dropout_rate: 0.2
+    epochs: 10
+    batch_size: 32
+
+# --- Evaluation & Output ---
+output:
+  model_save_dir: "models/saved_weights/"
+  metrics: ["accuracy", "f1_score", "precision", "recall"]
+  plot_confusion_matrix: true
+
+# --- API/Deployment Settings ---
+api:
+  host: "0.0.0.0"
+  port: 8080
+  debug_mode: false
