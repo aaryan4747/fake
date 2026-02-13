@@ -1,0 +1,9 @@
+News Text
+    ↓
+Text Preprocessing
+    ↓
+TF-IDF Vectorization
+    ↓
+Machine Learning Model
+    ↓
+Prediction (Real / Fake)
