@@ -5,7 +5,4 @@ The advent of the World Wide Web and the rapid adoption of social media platform
 
 Project is in Python Programming.
 
-नमस्ते (Namaste) 🙏🏻 , I'm Aaryan karthik
-Hi.gif
- !
-You Can use this Beautiful Project for your college Project
+
