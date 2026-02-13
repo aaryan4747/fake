@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="animate.css">
+
+<div class="animated shake" style="color: red; font-weight: bold;">
+    WARNING: Potential Misinformation Detected!
+</div>
+
+<div class="animated fadeInDown">
+    <h3>Article Analysis Result: 85% Confidence (Fake)</h3>
+</div>
